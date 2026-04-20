@@ -1,16 +1,44 @@
-# React + Vite
+# 5tmate — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing landing page for [5tmate](https://5tmate.com), your AI financial co-pilot for Asia.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite 8**
+- **Tailwind CSS v4**
+- **shadcn/ui** component library
+- **Paraglide JS** for i18n (EN, ID, TH, ZH-SG, ZH-TW)
+- **Syne** display font + **JetBrains Mono** for UI text
+- **oxfmt** for code formatting
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run paraglide   # generate i18n runtime (required before dev/build)
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Command              | Description                        |
+| -------------------- | ---------------------------------- |
+| `npm run dev`        | Start local dev server             |
+| `npm run build`      | Production build → `dist/`         |
+| `npm run preview`    | Preview production build locally   |
+| `npm run paraglide`  | Regenerate i18n from `messages/`   |
+| `npm run format`     | Format all files with oxfmt        |
+| `npm run format:check` | Check formatting (used in CI)    |
+| `npm run lint`       | Lint with ESLint                   |
+
+## i18n
+
+Message files live in `messages/`. After editing them, run `npm run paraglide` to regenerate `src/paraglide/` (this directory is gitignored — CI regenerates it automatically).
+
+## CI
+
+GitHub Actions runs on every push and PR to `main`:
+1. Format check
+2. Paraglide codegen
+3. Vite build
+4. Upload `dist/` as a GitHub artifact (retained 7 days)
