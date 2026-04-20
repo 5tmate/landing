@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Button } from '@/components/ui/button'
+import logo from '@/assets/logo.svg'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { m } from '@/paraglide/messages.js'
 
@@ -21,18 +22,17 @@ const Nav = () => {
   }, [])
 
   return (
-    <nav className={cn(
-      'fixed top-0 left-0 right-0 z-[100] px-10 transition-all duration-300',
-      scrolled
-        ? 'bg-background/85 backdrop-blur-xl border-b border-border'
-        : 'bg-transparent border-b border-transparent'
-    )}>
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between h-16">
+    <nav
+      className={cn(
+        'fixed top-0 left-0 right-0 z-[100] px-10 transition-all duration-300',
+        scrolled
+          ? 'bg-background/85 backdrop-blur-xl border-b border-border'
+          : 'bg-transparent border-b border-transparent',
+      )}
+    >
+      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="size-7 rounded-[7px] bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground">
-            5
-          </div>
-          <span className="text-[17px] font-semibold text-foreground tracking-tight">5tmate</span>
+          <img src={logo} alt="5tmate" className="size-8 rounded-[8px]" />
         </div>
 
         <div className="flex items-center gap-8">
@@ -40,13 +40,13 @@ const Nav = () => {
             <a
               key={href}
               href={href}
-              className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors no-underline cursor-pointer"
+              className="text-muted-foreground hover:text-foreground cursor-pointer text-xs font-medium no-underline transition-colors"
             >
               {label}
             </a>
           ))}
-          <div className="w-px h-5 bg-border" />
-          <a className="text-xs font-medium text-muted-foreground no-underline cursor-pointer">
+          <div className="bg-border h-5 w-px" />
+          <a className="text-muted-foreground cursor-pointer text-xs font-medium no-underline">
             {m.nav_login()}
           </a>
           <LanguageSwitcher />
