@@ -1,17 +1,20 @@
 {
   "name": "landing",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "format": "npx oxfmt@latest",
+    "format:check": "npx oxfmt@latest --check",
     "lint": "eslint .",
     "preview": "vite preview",
     "paraglide": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@fontsource-variable/syne": "^5.2.7",
     "@inlang/paraglide-js": "^2.16.0",
     "@inlang/plugin-message-format": "^4.4.0",
     "@phosphor-icons/react": "^2.1.10",
