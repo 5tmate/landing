@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
-import Nav from './Nav'
-import { Hero } from './Hero'
+import { IntegrationsSection, CTASection } from './Extras'
 import FeaturesSection from './FeaturesSection'
 import FinnSection from './FinnSection'
-import { MarketsSection, PricingSection, FooterSection } from './MarketsAndMore'
-import { IntegrationsSection, CTASection } from './Extras'
+import { Hero } from './Hero'
 import { LanguageProvider, useLocale } from './i18n'
+import { MarketsSection, PricingSection, FooterSection } from './MarketsAndMore'
+import Nav from './Nav'
 
 function AppInner() {
   const { locale } = useLocale()

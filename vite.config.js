@@ -1,8 +1,8 @@
 import path from 'path'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 import { paraglideVitePlugin } from '@inlang/paraglide-js'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 
 // Vite's chokidar watcher doesn't pick up addWatchFile() calls made in
 // buildStart, so message JSON files outside src/ are never watched in dev.
