@@ -1,37 +1,66 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-@import "@fontsource-variable/jetbrains-mono";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/syne';
 
 @custom-variant dark (&:is(.dark *));
 
 @keyframes typingDot {
-  0%, 60%, 100% { opacity: 0.2; transform: translateY(0); }
-  30% { opacity: 1; transform: translateY(-3px); }
+  0%,
+  60%,
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
 }
 
 @keyframes fadeInMsg {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUpFinn {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes marquee-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-33.333%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
 }
 
 @keyframes marquee-right {
-  from { transform: translateX(-33.333%); }
-  to { transform: translateX(0); }
+  from {
+    transform: translateX(-33.333%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-
 @theme inline {
+  --font-display: 'Syne Variable', sans-serif;
   --font-heading: var(--font-mono);
   --font-mono: 'JetBrains Mono Variable', monospace;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -232,12 +261,17 @@
 }
 
 .hero-headline {
+  font-family: var(--font-display);
   font-size: 58px;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.04;
   letter-spacing: -1.8px;
   color: #f4f5f6;
   margin-bottom: 22px;
+}
+
+.hero-headline .hero-accent {
+  font-weight: 700;
 }
 
 .hero-body-text {
@@ -254,11 +288,7 @@
   border-radius: 20px;
   padding: 14px 18px;
   margin-bottom: 14px;
-  background: linear-gradient(
-    135deg,
-    rgba(88, 225, 220, 0.08) 0%,
-    rgba(88, 225, 220, 0.02) 100%
-  );
+  background: linear-gradient(135deg, rgba(88, 225, 220, 0.08) 0%, rgba(88, 225, 220, 0.02) 100%);
   border: 1px solid rgba(88, 225, 220, 0.13);
   position: relative;
   overflow: hidden;
