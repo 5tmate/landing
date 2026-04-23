@@ -21,15 +21,15 @@ npm run dev
 
 ## Scripts
 
-| Command              | Description                        |
-| -------------------- | ---------------------------------- |
-| `npm run dev`        | Start local dev server             |
-| `npm run build`      | Production build → `dist/`         |
-| `npm run preview`    | Preview production build locally   |
-| `npm run paraglide`  | Regenerate i18n from `messages/`   |
-| `npm run format`     | Format all files with oxfmt        |
+| Command                | Description                      |
+| ---------------------- | -------------------------------- |
+| `npm run dev`          | Start local dev server           |
+| `npm run build`        | Production build → `dist/`       |
+| `npm run preview`      | Preview production build locally |
+| `npm run paraglide`    | Regenerate i18n from `messages/` |
+| `npm run format`       | Format all files with oxfmt      |
 | `npm run format:check` | Check formatting (used in CI)    |
-| `npm run lint`       | Lint with ESLint                   |
+| `npm run lint`         | Lint with ESLint                 |
 
 ## i18n
 
@@ -38,6 +38,7 @@ Message files live in `messages/`. After editing them, run `npm run paraglide` t
 ## CI
 
 GitHub Actions runs on every push and PR to `main`:
+
 1. Format check
 2. Paraglide codegen
 3. Vite build
