@@ -104,7 +104,7 @@ const FinnSection = () => {
                 <div className="text-foreground mb-1 text-sm font-semibold tracking-tight">
                   {f.title}
                 </div>
-                <div className="text-muted-foreground/70 text-[13px] leading-relaxed">{f.desc}</div>
+                <div className="text-muted-foreground text-[13px] leading-relaxed">{f.desc}</div>
               </div>
             ))}
           </div>
@@ -176,7 +176,7 @@ const FinnSection = () => {
 
             {/* Input */}
             <div className="border-border flex items-center gap-2.5 border-t px-5 py-3">
-              <div className="bg-muted/10 border-border text-muted-foreground/60 flex-1 rounded-lg border px-3.5 py-2.5 text-[13px]">
+              <div className="bg-muted/10 border-border text-muted-foreground/85 flex-1 rounded-lg border px-3.5 py-2.5 text-[13px]">
                 {m.finn_chat_placeholder()}
               </div>
               <div className="bg-primary text-primary-foreground flex size-[34px] cursor-pointer items-center justify-center rounded-lg text-[15px]">

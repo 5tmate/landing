@@ -17,13 +17,15 @@ function AppInner() {
   return (
     <>
       <Nav />
-      <Hero />
-      <FeaturesSection />
-      <FinnSection />
-      <MarketsSection />
-      <IntegrationsSection />
-      <PricingSection />
-      <CTASection />
+      <main>
+        <Hero />
+        <FeaturesSection />
+        <FinnSection />
+        <MarketsSection />
+        <IntegrationsSection />
+        <PricingSection />
+        <CTASection />
+      </main>
       <FooterSection />
     </>
   )

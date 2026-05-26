@@ -157,7 +157,7 @@ const FeaturesSection = () => {
               <div className="text-foreground mb-2 text-base font-semibold tracking-tight">
                 {f.title}
               </div>
-              <div className="text-muted-foreground/70 text-sm leading-relaxed">{f.desc}</div>
+              <div className="text-muted-foreground text-sm leading-relaxed">{f.desc}</div>
             </div>
           ))}
         </div>

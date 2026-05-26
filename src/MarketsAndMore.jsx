@@ -137,7 +137,7 @@ const MarketsSection = () => {
               <div className="text-foreground mb-1.5 text-base font-semibold tracking-tight">
                 {mkt.name}
               </div>
-              <div className="text-muted-foreground/70 text-xs leading-relaxed">{mkt.banks}</div>
+              <div className="text-muted-foreground text-xs leading-relaxed">{mkt.banks}</div>
             </div>
           ))}
         </div>
@@ -270,9 +270,9 @@ const PricingSection = () => {
                 <span className="text-foreground text-[40px] font-medium tracking-[-1px]">
                   {p.price}
                 </span>
-                <span className="text-muted-foreground/70 text-sm">{p.period}</span>
+                <span className="text-muted-foreground text-sm">{p.period}</span>
               </div>
-              <p className="text-muted-foreground/70 mb-6 text-sm leading-relaxed">{p.desc}</p>
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">{p.desc}</p>
 
               <div className="mb-7 flex flex-1 flex-col gap-2.5">
                 {p.features.map((f, fi) => (
@@ -352,14 +352,14 @@ const FooterSection = () => {
                 5tmate
               </span>
             </div>
-            <p className="text-muted-foreground/70 max-w-[280px] text-[13px] leading-relaxed">
+            <p className="text-muted-foreground max-w-[280px] text-[13px] leading-relaxed">
               {m.footer_tagline()}
             </p>
           </div>
 
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <div className="text-muted-foreground/60 mb-4 text-xs font-semibold tracking-[0.06em] uppercase">
+              <div className="text-muted-foreground/85 mb-4 text-xs font-semibold tracking-[0.06em] uppercase">
                 {col.title}
               </div>
               {col.links.map((link, i) => (
@@ -375,10 +375,10 @@ const FooterSection = () => {
         </div>
 
         <div className="border-border flex flex-col gap-3 border-t pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <span className="text-muted-foreground/60 text-xs">{m.footer_copyright()}</span>
+          <span className="text-muted-foreground/85 text-xs">{m.footer_copyright()}</span>
           <div className="flex gap-5">
             {cities.map((city, i) => (
-              <span key={i} className="text-muted-foreground/60 text-[11px] font-medium">
+              <span key={i} className="text-muted-foreground/85 text-[11px] font-medium">
                 {city}
               </span>
             ))}

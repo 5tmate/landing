@@ -67,7 +67,7 @@ const IntegrationsSection = () => {
         {[...items, ...items, ...items].map((item, i) => (
           <div
             key={i}
-            className="bg-card/30 border-border text-muted-foreground/70 shrink-0 rounded-lg border px-[18px] py-2 text-[13px] font-medium whitespace-nowrap"
+            className="bg-card/30 border-border text-muted-foreground shrink-0 rounded-lg border px-[18px] py-2 text-[13px] font-medium whitespace-nowrap"
           >
             {item}
           </div>
@@ -89,7 +89,7 @@ const IntegrationsSection = () => {
           transition: 'all 0.7s cubic-bezier(0.16,1,0.3,1)',
         }}
       >
-        <div className="text-muted-foreground/60 mb-3 text-xs font-semibold tracking-[0.08em] uppercase">
+        <div className="text-muted-foreground/85 mb-3 text-xs font-semibold tracking-[0.08em] uppercase">
           {m.integrations_label()}
         </div>
         <h3 className="text-foreground text-2xl font-medium tracking-tight">
